@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+function tryRemoveFromArray(arr, num) {
+    let arrNew = [];
+    for (let i = 0; i< arr.length; i++){
+        if (num < arr.length){
+            for (let j = 0; j < num; j ++){
+                arrNew.push(arr[j])
+            }
+            for (let k = num + 1; k < arr.length; k ++){
+                arrNew.push(arr[k])
+            }
+            return arrNew
+        }else {
+            return arr
+        }
+    }
+}
+console.log(tryRemoveFromArray([1,2,3,4], 5))
+
+</script>
+
+</body>
+</html>

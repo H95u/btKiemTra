@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function kiemTra(pointArr) {
+
+        let temp;
+        for (let i = 0; i < pointArr.length; i++) {
+            for (let j = i + 1; j < pointArr.length; j++) {
+                if (pointArr[i] < pointArr[j]) {
+                    temp = pointArr[i];
+                    pointArr[i] = pointArr[j];
+                    pointArr[j] = temp;
+                }
+            }
+        }
+        return pointArr[2];
+    }
+
+    alert(kiemTra([5, 4, 10, 0, 1]))
+</script>
+
+</body>
+</html>
